@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
-import cppCourse from "../../data/cppCourse.json";
-import pythonCourse from "../../data/pythonCourse.json";
+import cppCourse from "../../../data/cppCourse.json";
+import pythonCourse from "../../../data/pythonCourse.json";
 
 const LearnModule = () => {
   const { courseId, moduleId } = useParams();

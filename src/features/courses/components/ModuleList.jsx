@@ -1,5 +1,5 @@
 import ModuleItem from "./ModuleItem";
-import useProgress from "../../courses/hooks/useProgress";
+import useProgress from "../hooks/useProgress";
 
 const ModuleList = ({ modules, courseId }) => {
   const { completed, markComplete } = useProgress(courseId);

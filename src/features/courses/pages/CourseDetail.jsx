@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import cppCourse from "../../data/cppCourse.json";
-import pythonCourse from "../../data/pythonCourse.json";
+import cppCourse from "../../../data/cppCourse.json";
+import pythonCourse from "../../../data/pythonCourse.json";
 import ModuleList from "../components/ModuleList";
-import ProgressBar from "../../quiz/components/ProgressBar";
-import useProgress from "../../courses/hooks/useProgress";
+import ProgressBar from "../../../quiz/components/ProgressBar";
+import useProgress from "../hooks/useProgress";
 
 const CourseDetail = () => {
   const { courseId } = useParams();
@@ -16,7 +16,7 @@ const CourseDetail = () => {
   if (!course) return <div>Course not found 🚫</div>;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 px-4 md:px-6 py-6 max-w-5xl mx-auto">
       <h1 className="text-2xl font-bold">{course.title}</h1>
 
       {/* Progress */}

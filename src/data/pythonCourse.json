@@ -1,6 +1,7 @@
 {
   "courseId": "python-001",
   "title": "Programming in Python",
+  "category": "Programming",
   "description": "A Complete Beginner-to-Intermediate Course",
   "totalModules": 5,
   "totalMCQs": 25,

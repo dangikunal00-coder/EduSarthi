@@ -1,19 +1,16 @@
 {
   "courseId": "cpp-001",
   "title": "Programming in C++",
+  "category": "Programming",
   "description": "A Complete Beginner-to-Intermediate Course",
   "totalModules": 5,
   "totalMCQs": 25,
-
   "modules": [
     {
       "id": "module-1",
       "title": "Introduction to C++ & Getting Started",
-      
       "content": "C++ is a powerful, general-purpose programming language developed by Bjarne Stroustrup. It supports both low-level and high-level programming, making it suitable for systems programming and application development.",
-      
       "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Hello, World!\" << endl;\n    return 0;\n}",
-      
       "summary": [
         "C++ is a compiled and statically typed language.",
         "Every program starts with main().",
@@ -21,9 +18,7 @@
         "Variables must be declared before use.",
         "const keyword is used for constants."
       ],
-
       "video": "https://www.youtube.com/embed/vLnPwxZdW4Y",
-
       "quiz": [
         {
           "question": "Which is correct way to print Hello?",
@@ -37,20 +32,21 @@
         },
         {
           "question": "Entry point of C++ program?",
-          "options": ["start()", "main()", "run()", "init()"],
+          "options": [
+            "start()",
+            "main()",
+            "run()",
+            "init()"
+          ],
           "answer": "main()"
         }
       ]
     },
-
     {
       "id": "module-2",
       "title": "Operators, Control Flow & Loops",
-
       "content": "Operators perform operations on variables. Control flow statements like if-else and loops control program execution.",
-
       "code": "for(int i=1;i<=5;i++){\n  cout<<i;\n}",
-
       "summary": [
         "Arithmetic operators perform math operations.",
         "if-else controls decision making.",
@@ -58,62 +54,70 @@
         "while loop runs based on condition.",
         "break and continue control loops."
       ],
-
       "video": "https://www.youtube.com/embed/8jLOx1hD3_o",
-
       "quiz": [
         {
           "question": "Output of 17 % 5?",
-          "options": ["3", "2", "5", "0"],
+          "options": [
+            "3",
+            "2",
+            "5",
+            "0"
+          ],
           "answer": "2"
         },
         {
           "question": "Which loop runs at least once?",
-          "options": ["for", "while", "do-while", "none"],
+          "options": [
+            "for",
+            "while",
+            "do-while",
+            "none"
+          ],
           "answer": "do-while"
         }
       ]
     },
-
     {
       "id": "module-3",
       "title": "Functions, Arrays & Pointers",
-
       "content": "Functions help reuse code. Arrays store multiple values. Pointers store memory addresses.",
-
       "code": "int add(int a, int b){ return a+b; }",
-
       "summary": [
         "Functions improve modularity.",
         "Arrays store elements in sequence.",
         "Pointers store memory addresses.",
         "Dynamic memory uses new and delete."
       ],
-
       "video": "https://www.youtube.com/embed/zuegQmMdy8M",
-
       "quiz": [
         {
           "question": "What does & operator do?",
-          "options": ["AND", "Address", "Pointer", "Reference"],
+          "options": [
+            "AND",
+            "Address",
+            "Pointer",
+            "Reference"
+          ],
           "answer": "Address"
         },
         {
           "question": "First index of array?",
-          "options": ["1", "0", "-1", "Depends"],
+          "options": [
+            "1",
+            "0",
+            "-1",
+            "Depends"
+          ],
           "answer": "0"
         }
       ]
     },
-
     {
       "id": "module-4",
       "title": "Object-Oriented Programming in C++",
-
       "content": "OOP includes encapsulation, inheritance, polymorphism, and abstraction using classes and objects.",
-
       "code": "class Student { public: string name; };",
-
       "summary": [
         "OOP has 4 pillars.",
         "Classes define structure.",
@@ -121,39 +125,41 @@
         "Inheritance allows reuse.",
         "Polymorphism enables flexibility."
       ],
-
       "video": "https://www.youtube.com/embed/wN0x9eZLix4",
-
       "quiz": [
         {
           "question": "Which is access specifier?",
-          "options": ["private", "open", "global", "static"],
+          "options": [
+            "private",
+            "open",
+            "global",
+            "static"
+          ],
           "answer": "private"
         }
       ]
     },
-
     {
       "id": "module-5",
       "title": "Templates, STL, File I/O & Exception Handling",
-
       "content": "Templates allow generic programming. STL provides data structures. File I/O handles files.",
-
       "code": "template<typename T> T add(T a, T b){ return a+b; }",
-
       "summary": [
         "Templates allow generic code.",
         "STL provides vector, map, etc.",
         "File I/O uses fstream.",
         "Exceptions handled using try-catch."
       ],
-
       "video": "https://www.youtube.com/embed/tp4_UXe9z0I",
-
       "quiz": [
         {
           "question": "Which container is dynamic array?",
-          "options": ["array", "vector", "set", "map"],
+          "options": [
+            "array",
+            "vector",
+            "set",
+            "map"
+          ],
           "answer": "vector"
         }
       ]

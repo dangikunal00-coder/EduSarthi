@@ -1,23 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
 
-const SidebarItem = ({ icon, label, path }) => {
+const NavbarItem = ({ icon, label, path }) => {
   const location = useLocation();
-
   const isActive = location.pathname === path;
 
   return (
     <Link
       to={path}
-      className={`flex items-center p-3 rounded-lg transition ${
+      className={`flex items-center gap-2 px-3 py-2 rounded-lg transition ${
         isActive
-          ? "bg-purple-600 text-white"
+          ? "bg-[#4F46E5] text-white"
           : "text-gray-400 hover:bg-gray-800 hover:text-white"
       }`}
     >
-      <span>{icon}</span>
+      {icon && <span>{icon}</span>}
       <span>{label}</span>
     </Link>
   );
 };
 
-export default SidebarItem;
+export default NavbarItem;
