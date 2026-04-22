@@ -1,0 +1,119 @@
+{
+  "courseId": "python-001",
+  "title": "Programming in Python",
+  "description": "A Complete Beginner-to-Intermediate Course",
+  "totalModules": 5,
+  "totalMCQs": 25,
+
+  "modules": [
+    {
+      "id": "py-module-1",
+      "title": "Introduction to Python & Getting Started",
+      "content": "Python is a high-level, easy-to-read programming language created by Guido van Rossum. It is widely used in web development, AI, data science, and automation.",
+      "code": "print('Hello, World!')",
+      "summary": [
+        "Python is interpreted and dynamically typed.",
+        "Uses indentation instead of braces.",
+        "print() is used for output.",
+        "input() is used for user input."
+      ],
+      "video": "https://www.youtube.com/embed/_uQrJ0TkZlc",
+      "quiz": [
+        {
+          "question": "Which function prints output?",
+          "options": ["echo()", "print()", "log()", "write()"],
+          "answer": "print()"
+        },
+        {
+          "question": "Python is?",
+          "options": ["Compiled", "Interpreted", "Binary", "Assembly"],
+          "answer": "Interpreted"
+        }
+      ]
+    },
+
+    {
+      "id": "py-module-2",
+      "title": "Operators, Control Flow & Loops",
+      "content": "Operators perform operations on variables. Control flow like if-else and loops control execution.",
+      "code": "for i in range(5):\n  print(i)",
+      "summary": [
+        "Operators perform calculations.",
+        "if-else controls decisions.",
+        "for loop iterates sequences.",
+        "while loop runs until condition is false."
+      ],
+      "video": "https://www.youtube.com/embed/6iF8Xb7Z3wQ",
+      "quiz": [
+        {
+          "question": "What does // do?",
+          "options": ["Divide", "Floor divide", "Multiply", "Mod"],
+          "answer": "Floor divide"
+        }
+      ]
+    },
+
+    {
+      "id": "py-module-3",
+      "title": "Functions, Scope & Modules",
+      "content": "Functions help reuse code. Modules allow code reuse across files.",
+      "code": "def greet(name):\n  print('Hello', name)",
+      "summary": [
+        "Functions use def keyword.",
+        "Return sends value back.",
+        "Global and local scope.",
+        "Modules store reusable code."
+      ],
+      "video": "https://www.youtube.com/embed/9Os0o3wzS_I",
+      "quiz": [
+        {
+          "question": "Keyword to define function?",
+          "options": ["func", "define", "def", "lambda"],
+          "answer": "def"
+        }
+      ]
+    },
+
+    {
+      "id": "py-module-4",
+      "title": "Data Structures",
+      "content": "Lists, tuples, sets, and dictionaries store data in different ways.",
+      "code": "fruits = ['apple','banana']",
+      "summary": [
+        "List is mutable.",
+        "Tuple is immutable.",
+        "Set stores unique values.",
+        "Dictionary stores key-value pairs."
+      ],
+      "video": "https://www.youtube.com/embed/R-HLU9Fl5ug",
+      "quiz": [
+        {
+          "question": "Which stores key-value?",
+          "options": ["List", "Set", "Dictionary", "Tuple"],
+          "answer": "Dictionary"
+        }
+      ]
+    },
+
+    {
+      "id": "py-module-5",
+      "title": "OOP & File Handling",
+      "content": "Python supports object-oriented programming and file handling.",
+      "code": "class Dog:\n  def __init__(self,name):\n    self.name=name",
+      "summary": [
+        "Classes define structure.",
+        "Objects are instances.",
+        "Files can be read/write.",
+        "try-except handles errors."
+      ],
+      "video": "https://www.youtube.com/embed/JeznW_7DlB0",
+      "quiz": [
+        {
+          "question": "__init__ is?",
+          "options": ["Destructor", "Constructor", "Function", "Loop"],
+          "answer": "Constructor"
+        }
+      ]
+    }
+  ]
+}
