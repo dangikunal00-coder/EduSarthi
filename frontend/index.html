@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduSarthi AI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <div class="header">
+      <span>🤖 EduSarthi AI</span>
+      <!-- NEW: Quiz button top-right -->
+      <button id="quiz-header-btn" onclick="openQuizFromButton()">
+        🎯 Take a Quiz
+      </button>
+    </div>
+
+    <!-- ═══════════ CHAT AREA ═══════════ -->
+    <div id="chat-container">
+      <div id="chat-box">
+        <div class="bot-msg">
+          Hello! I'm your EduSarthi AI tutor. How can I help you today?<br/><br/>
+          💡 <strong>Tip:</strong> You can also type <em>"Generate quiz on DSA"</em> or click the <strong>🎯 Take a Quiz</strong> button to start a quiz!
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════ INPUT AREA ═══════════ -->
+    <div class="input-area">
+      <input
+        id="user-input"
+        type="text"
+        placeholder="Ask Anything..."
+        autocomplete="off"
+      />
+      <button id="send-btn">Send</button>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         QUIZ OVERLAY  (slides up over the chat — no page change)
+    ════════════════════════════════════════════════════════════════ -->
+    <div id="quiz-overlay">
+
+      <!-- Quiz Header -->
+      <div class="quiz-header">
+        <div class="quiz-header-left">
+          🎯 <span id="quiz-topic-display">Quiz</span>
+        </div>
+        <div class="quiz-header-right">
+          <span class="score-badge" id="live-score-badge">Score: 0</span>
+          <button class="exit-quiz-btn" onclick="closeQuiz()">✕ Exit</button>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="quiz-progress-area">
+        <div class="progress-meta">
+          <span id="question-counter">Question 1 of 10</span>
+          <span id="difficulty-tag"></span>
+        </div>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- Quiz Body: switches between loading / topic-ask / question / result -->
+      <div class="quiz-body" id="quiz-body">
+
+        <!-- ── STATE 1: Loading spinner ── -->
+        <div id="state-loading" class="quiz-state">
+          <div class="spinner"></div>
+          <p>Generating your quiz with AI…</p>
+          <p style="font-size:0.8rem;color:#8b949e;">This takes 5–10 seconds</p>
+        </div>
+
+        <!-- ── STATE 2: Ask topic (used when user clicks header button) ── -->
+        <div id="state-ask-topic" class="quiz-state" style="display:none;">
+          <div class="topic-ask-card">
+            <div class="topic-ask-icon">📚</div>
+            <h2>What topic would you like to be quizzed on?</h2>
+            <p>Type any subject — DSA, DBMS, OS, Networks, Python, etc.</p>
+            <div class="topic-input-row">
+              <input
+                id="topic-input"
+                type="text"
+                placeholder="e.g. Data Structures and Algorithms"
+                autocomplete="off"
+              />
+              <button id="topic-submit-btn" onclick="submitTopic()">
+                Start Quiz →
+              </button>
+            </div>
+            <button class="cancel-link" onclick="closeQuiz()">Cancel, go back to chat</button>
+          </div>
+        </div>
+
+        <!-- ── STATE 3: Question ── -->
+        <div id="state-question" class="quiz-state" style="display:none;">
+          <div class="question-card" id="question-card">
+
+            <div class="q-number" id="q-number-label">Q1 / 10</div>
+            <div class="q-text" id="q-text">Loading question…</div>
+
+            <div class="options-list" id="options-list"></div>
+
+            <!-- Feedback (shown after answer) -->
+            <div id="feedback-box" style="display:none;"></div>
+
+            <!-- Action buttons -->
+            <div class="action-row">
+              <button class="btn-submit" id="submit-btn" onclick="submitAnswer()" disabled>
+                Submit Answer
+              </button>
+              <button class="btn-next" id="next-btn" onclick="goToNext()" style="display:none;">
+                Next Question →
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── STATE 4: Result screen ── -->
+        <div id="state-result" class="quiz-state" style="display:none;">
+          <div class="result-card">
+            <div class="result-score-ring" id="score-ring">
+              <span id="score-ring-text">0/10</span>
+            </div>
+            <h2 id="result-title">Quiz Complete!</h2>
+            <p id="result-subtitle"></p>
+
+            <div class="weak-areas-box" id="weak-areas-box" style="display:none;">
+              <h4>⚠ Topics to Review</h4>
+              <ul id="weak-areas-list"></ul>
+            </div>
+
+            <div class="result-buttons">
+              <button class="btn-submit" onclick="retryQuiz()">🔄 Retry Quiz</button>
+              <button class="btn-back-chat" onclick="closeQuiz()">← Back to Chat</button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /quiz-body -->
+    </div><!-- /quiz-overlay -->
+
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
