@@ -1,0 +1,29 @@
+{
+    "courseId": "docker-001",
+    "title": "Docker & Containers",
+    "category": "DevOps",
+    "description": "Containerization",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["DevOps"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Docker Basics",
+        "content": "Docker creates containers.",
+        "code": "docker run",
+        "summary": [
+          "Lightweight",
+          "Portable"
+        ],
+        "video": "https://www.youtube.com/embed/3c-iBn73dDE",
+        "quiz": [
+          {
+            "question": "Docker is?",
+            "options": ["Container", "OS", "DB", "None"],
+            "answer": "Container"
+          }
+        ]
+      }
+    ]
+  }

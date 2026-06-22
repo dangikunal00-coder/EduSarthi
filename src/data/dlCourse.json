@@ -1,0 +1,29 @@
+{
+    "courseId": "dl-001",
+    "title": "Deep Learning",
+    "category": "AI",
+    "description": "Neural networks",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["ML"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Neural Networks",
+        "content": "DL uses neural networks.",
+        "code": "model = Sequential()",
+        "summary": [
+          "Uses layers",
+          "Used in AI"
+        ],
+        "video": "https://www.youtube.com/embed/aircAruvnKk",
+        "quiz": [
+          {
+            "question": "DL is?",
+            "options": ["ML subset", "DB", "OS", "None"],
+            "answer": "ML subset"
+          }
+        ]
+      }
+    ]
+  }

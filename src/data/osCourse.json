@@ -1,0 +1,30 @@
+{
+    "courseId": "os-001",
+    "title": "Operating Systems",
+    "category": "CS Core",
+    "description": "Learn OS concepts",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["OS"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Introduction to OS",
+        "content": "OS manages hardware and software resources.",
+        "code": "// No code",
+        "summary": [
+          "Manages memory",
+          "Handles processes",
+          "Provides interface"
+        ],
+        "video": "https://www.youtube.com/embed/26QPDBe-NB8",
+        "quiz": [
+          {
+            "question": "OS is?",
+            "options": ["Software", "Hardware", "Firmware", "None"],
+            "answer": "Software"
+          }
+        ]
+      }
+    ]
+  }

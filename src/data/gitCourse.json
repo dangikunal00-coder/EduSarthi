@@ -1,0 +1,30 @@
+{
+    "courseId": "git-001",
+    "title": "Git & GitHub",
+    "category": "Tools",
+    "description": "Version control",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Git"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Git Basics",
+        "content": "Git tracks code changes.",
+        "code": "git init",
+        "summary": [
+          "Version control",
+          "Tracks changes",
+          "Collaboration"
+        ],
+        "video": "https://www.youtube.com/embed/RGOj5yH7evk",
+        "quiz": [
+          {
+            "question": "Git is?",
+            "options": ["VCS", "Language", "DB", "None"],
+            "answer": "VCS"
+          }
+        ]
+      }
+    ]
+  }

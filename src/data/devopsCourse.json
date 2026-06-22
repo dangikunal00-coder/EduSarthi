@@ -1,0 +1,30 @@
+{
+    "courseId": "devops-001",
+    "title": "DevOps",
+    "category": "Modern Tech",
+    "description": "Development + Operations",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["DevOps"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "DevOps Intro",
+        "content": "DevOps improves development lifecycle.",
+        "code": "git push",
+        "summary": [
+          "CI/CD",
+          "Automation",
+          "Faster delivery"
+        ],
+        "video": "https://www.youtube.com/embed/Xrgk023l4lI",
+        "quiz": [
+          {
+            "question": "DevOps means?",
+            "options": ["Dev+Ops", "Only Dev", "Only Ops", "None"],
+            "answer": "Dev+Ops"
+          }
+        ]
+      }
+    ]
+  }

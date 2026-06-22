@@ -1,0 +1,30 @@
+{
+    "courseId": "ml-001",
+    "title": "Machine Learning (ML)",
+    "category": "AI",
+    "description": "Basics of ML",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["ML", "AI"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "ML Basics",
+        "content": "ML allows systems to learn from data.",
+        "code": "model.fit(X,y)",
+        "summary": [
+          "Uses data",
+          "Improves automatically",
+          "Types: supervised, unsupervised"
+        ],
+        "video": "https://www.youtube.com/embed/GwIo3gDZCVQ",
+        "quiz": [
+          {
+            "question": "ML is subset of?",
+            "options": ["AI", "DBMS", "OS", "None"],
+            "answer": "AI"
+          }
+        ]
+      }
+    ]
+  }

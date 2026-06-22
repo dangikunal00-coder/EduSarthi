@@ -1,0 +1,30 @@
+{
+    "courseId": "cyber-001",
+    "title": "Cyber Security",
+    "category": "Security",
+    "description": "Protect systems",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Cyber"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Security Basics",
+        "content": "Cybersecurity protects data.",
+        "code": "// encryption",
+        "summary": [
+          "Protects systems",
+          "Uses encryption",
+          "Prevents attacks"
+        ],
+        "video": "https://www.youtube.com/embed/inWWhr5tnEA",
+        "quiz": [
+          {
+            "question": "Cybersecurity protects?",
+            "options": ["Data", "System", "Both", "None"],
+            "answer": "Both"
+          }
+        ]
+      }
+    ]
+  }

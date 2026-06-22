@@ -1,0 +1,30 @@
+{
+    "courseId": "dbms-001",
+    "title": "Database Management Systems",
+    "category": "CS Core",
+    "description": "Learn DBMS",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["DBMS"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "DBMS Basics",
+        "content": "DBMS is used to store and manage data.",
+        "code": "SELECT * FROM table;",
+        "summary": [
+          "Uses SQL",
+          "Stores data",
+          "Ensures security"
+        ],
+        "video": "https://www.youtube.com/embed/4cWkVbC2bNE",
+        "quiz": [
+          {
+            "question": "SQL stands for?",
+            "options": ["Structured Query Language", "Simple Query", "None", "Both"],
+            "answer": "Structured Query Language"
+          }
+        ]
+      }
+    ]
+  }

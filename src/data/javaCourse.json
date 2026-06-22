@@ -1,0 +1,30 @@
+{
+    "courseId": "java-001",
+    "title": "Programming in Java",
+    "category": "Programming",
+    "description": "Learn Java OOP concepts",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Java", "OOP"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Java Basics",
+        "content": "Java is an object-oriented programming language.",
+        "code": "class Main { public static void main(String[] args){ System.out.println(\"Hello\"); }}",
+        "summary": [
+          "Java is OOP",
+          "Uses JVM",
+          "Platform independent"
+        ],
+        "video": "https://www.youtube.com/embed/eIrMbAQSU34",
+        "quiz": [
+          {
+            "question": "Java is?",
+            "options": ["Compiled", "Interpreted", "Both", "None"],
+            "answer": "Both"
+          }
+        ]
+      }
+    ]
+  }

@@ -7,14 +7,31 @@ const NavbarItem = ({ icon, label, path }) => {
   return (
     <Link
       to={path}
-      className={`flex items-center gap-2 px-3 py-2 rounded-lg transition ${
-        isActive
-          ? "bg-[#4F46E5] text-white"
-          : "text-gray-400 hover:bg-gray-800 hover:text-white"
-      }`}
+      className={`
+        flex items-center gap-2 
+        px-3 sm:px-4 py-2 sm:py-2.5 
+        rounded-lg transition-all duration-200
+
+        text-sm sm:text-base
+
+        ${
+          isActive
+            ? "bg-[#4F46E5] text-white shadow-md"
+            : "text-gray-400 hover:bg-gray-800 hover:text-white"
+        }
+      `}
     >
-      {icon && <span>{icon}</span>}
-      <span>{label}</span>
+      {/* Icon */}
+      {icon && (
+        <span className="text-base sm:text-lg">
+          {icon}
+        </span>
+      )}
+
+      {/* Label */}
+      <span className="whitespace-nowrap">
+        {label}
+      </span>
     </Link>
   );
 };

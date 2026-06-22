@@ -1,0 +1,29 @@
+{
+    "courseId": "stats-001",
+    "title": "Statistics for Data Science",
+    "category": "Data",
+    "description": "Statistics basics",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Statistics"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Mean Median Mode",
+        "content": "Basic statistical measures.",
+        "code": "mean = sum/n",
+        "summary": [
+          "Mean average",
+          "Median middle value"
+        ],
+        "video": "https://www.youtube.com/embed/xxpc-HPKN28",
+        "quiz": [
+          {
+            "question": "Mean is?",
+            "options": ["Average", "Middle", "Max", "None"],
+            "answer": "Average"
+          }
+        ]
+      }
+    ]
+  }

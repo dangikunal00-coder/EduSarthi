@@ -1,0 +1,29 @@
+{
+    "courseId": "nlp-001",
+    "title": "Natural Language Processing (NLP)",
+    "category": "AI",
+    "description": "Text processing",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["AI"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Text Processing",
+        "content": "NLP processes language.",
+        "code": "tokenize(text)",
+        "summary": [
+          "Used in chatbots",
+          "Text analysis"
+        ],
+        "video": "https://www.youtube.com/embed/fOvTtapxa9c",
+        "quiz": [
+          {
+            "question": "NLP works on?",
+            "options": ["Text", "Image", "Video", "None"],
+            "answer": "Text"
+          }
+        ]
+      }
+    ]
+  }

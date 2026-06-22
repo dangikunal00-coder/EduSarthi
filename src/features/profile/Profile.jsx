@@ -7,7 +7,7 @@ const Profile = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const user = auth.currentUser;
 
   // 🔥 Fetch user data
@@ -22,25 +22,29 @@ const Profile = () => {
     };
 
     fetchData();
-  }, []);
+  }, [user]);
 
   // 🔹 Handle input
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  // 🔥 Update profile
+  // 🔥 Update profile (role safe)
   const handleUpdate = async () => {
     try {
       setLoading(true);
 
-      await updateDoc(doc(db, "users", user.uid), {
-        ...data,
-      });
+      let updatedData = { ...data };
 
-    //   alert("Profile Updated ✅");
-      navigate('/')
+      // ❌ Admin ko student wale fields save na ho
+      if (data.role === "admin") {
+        delete updatedData.course;
+        delete updatedData.semester;
+      }
 
+      await updateDoc(doc(db, "users", user.uid), updatedData);
+
+      navigate("/");
     } catch (err) {
       console.error(err);
       alert("Update failed ❌");
@@ -49,40 +53,74 @@ const Profile = () => {
     }
   };
 
-  if (!data) return <div className="text-white text-center mt-10">Loading...</div>;
+  if (!data)
+    return <div className="text-white text-center mt-10">Loading...</div>;
 
   return (
     <div className="max-w-xl mx-auto mt-10 bg-[#1E293B] p-6 rounded-xl space-y-4">
-
       <h1 className="text-2xl font-bold text-white">Edit Profile</h1>
 
-      {/* Profile Image */}
-      <div className="flex items-center gap-4">
-        <img
-          src={data.photoURL || "https://via.placeholder.com/80"}
-          alt="profile"
-          className="w-20 h-20 rounded-full object-cover"
-        />
+      {/* 🔥 COMMON FIELD */}
+      <input
+        name="name"
+        value={data.name || ""}
+        onChange={handleChange}
+        className="input"
+        placeholder="Full Name"
+      />
 
-        <input
-          type="text"
-          name="photoURL"
-          placeholder="Paste Image URL"
-          value={data.photoURL || ""}
-          onChange={handleChange}
-          className="input"
-        />
-      </div>
+      {/* 🔥 STUDENT ONLY */}
+      {data.role === "student" && (
+        <>
+          <input
+            name="course"
+            value={data.course || ""}
+            onChange={handleChange}
+            className="input"
+            placeholder="Course"
+          />
+          <input
+            name="semester"
+            value={data.semester || ""}
+            onChange={handleChange}
+            className="input"
+            placeholder="Semester"
+          />
+          <input
+            name="college"
+            value={data.college || ""}
+            onChange={handleChange}
+            className="input"
+            placeholder="College"
+          />
+        </>
+      )}
 
-      {/* Fields */}
-      <input name="name" value={data.name || ""} onChange={handleChange} className="input" placeholder="Full Name" />
-      <input name="course" value={data.course || ""} onChange={handleChange} className="input" placeholder="Course" />
-      <input name="semester" value={data.semester || ""} onChange={handleChange} className="input" placeholder="Semester" />
-      <input name="college" value={data.college || ""} onChange={handleChange} className="input" placeholder="College" />
-      <input name="phone" value={data.phone || ""} onChange={handleChange} className="input" placeholder="Phone" />
-      <input name="interests" value={data.interests || ""} onChange={handleChange} className="input" placeholder="Interests" />
+      {/* 🔥 ADMIN ONLY */}
+      {data.role === "admin" && (
+        <>
+          <input
+            name="college"
+            value={data.college || ""}
+            onChange={handleChange}
+            className="input"
+            placeholder="College"
+          />
+        </>
+      )}
 
-      {/* Update Button */}
+      {/* 🔥 COMMON FOR ALL */}
+      <input
+        name="phone"
+        value={data.phone || ""}
+        onChange={handleChange}
+        className="input"
+        placeholder="Phone"
+      />
+
+     
+
+      {/* 🔥 BUTTON */}
       <button
         onClick={handleUpdate}
         disabled={loading}
@@ -91,6 +129,7 @@ const Profile = () => {
         {loading ? "Updating..." : "Update Profile"}
       </button>
 
+      {/* 🔥 STYLE */}
       <style>
         {`
           .input {
@@ -103,7 +142,6 @@ const Profile = () => {
           }
         `}
       </style>
-
     </div>
   );
 };

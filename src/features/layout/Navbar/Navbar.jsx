@@ -21,74 +21,77 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
-  // 🔥 Fetch logged-in user
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         const docRef = doc(db, "users", user.uid);
         const snap = await getDoc(docRef);
-
-        if (snap.exists()) {
-          setProfile(snap.data());
-        }
+        if (snap.exists()) setProfile(snap.data());
       }
     });
-
     return () => unsubscribe();
   }, []);
 
-  // 🔥 Logout
   const handleLogout = async () => {
     await signOut(auth);
-    navigate("/login"); // 🔥 redirect after logout
+    navigate("/login");
   };
 
   return (
-    <div className="bg-[#020617] border-b border-gray-800 relative">
+    <div className="bg-[#020617] border-b border-gray-800 sticky top-0 z-50">
 
-      {/* Top Bar */}
-      <div className="flex justify-between items-center px-4 md:px-6 py-4">
+      {/* 🔥 Top Bar */}
+      <div className="flex justify-between items-center px-3 sm:px-4 md:px-6 py-3 md:py-4">
 
         {/* Logo */}
-        <img className="w-40 md:w-52" src={EdisarthiLogo} alt="Logo" />
+        <img
+          className="w-32 sm:w-40 md:w-52 object-contain cursor-pointer"
+          onClick={() => navigate("/")}
+          src={EdisarthiLogo}
+          alt="Logo"
+        />
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-3">
-          <NavbarItem label="Dashboard" path="/" />
-          <NavbarItem label="Courses" path="/courses" />
-          <NavbarItem label="AI" path="/chat" />
-          <NavbarItem label="Assignments" path="/assignments" />
-          <NavbarItem label="Help" path="/help" />
-        </div>
 
-        {/* Right Section */}
-        <div className="flex items-center gap-3 relative">
+        {/*Nav  Right Section */}
+        <div className="flex items-center gap-2 sm:gap-3 relative">
 
-          <Bell className="cursor-pointer" />
-          <Settings className="cursor-pointer" />
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-4">
+            <NavbarItem label="Courses" path="/courses" />
+            <NavbarItem label="Project" path="/project" />
+            <NavbarItem label="Tutorials" path="/tutorials" />
+            <NavbarItem label="My performance" path="/my-performance" />
+          </div>
 
-          {/* 🔥 Avatar */}
+          {/* Icons */}
+          <Bell className="cursor-pointer w-5 h-5 sm:w-6 sm:h-6 text-white" />
+          <Settings className="cursor-pointer w-5 h-5 sm:w-6 sm:h-6 text-white" />
+
+          {/* Avatar */}
           <div
             onClick={() => setProfileOpen(!profileOpen)}
-            className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#4F46E5] flex items-center justify-center cursor-pointer text-white font-semibold"
+            className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full overflow-hidden cursor-pointer border border-gray-600"
           >
-            {/* profile Image */}
-            {/* {profile?.name?.charAt(0) || "U"} */}
             <img
               src={profile?.photoURL || "https://via.placeholder.com/40"}
-              className="w-10 h-10 rounded-full object-cover cursor-pointer"
+              className="w-full h-full object-cover"
+              alt="profile"
             />
           </div>
 
           {/* 🔥 Profile Dropdown */}
           {profileOpen && (
-            <div className="absolute right-0 top-14 w-56 bg-[#1E293B] border border-[#334155] rounded-lg shadow-lg p-4 z-50">
-
-              <p className="font-semibold">
+            <div className="
+              absolute right-0 top-12 sm:top-14 
+              w-52 sm:w-56 
+              bg-[#1E293B] border border-[#334155] 
+              rounded-lg shadow-lg p-4 z-50
+            ">
+              <p className="font-semibold text-sm sm:text-base">
                 {profile?.name || "User"}
               </p>
 
-              <p className="text-sm text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-400 break-words">
                 {profile?.email}
               </p>
 
@@ -99,24 +102,23 @@ const Navbar = () => {
                   navigate("/profile");
                   setProfileOpen(false);
                 }}
-                className="w-full text-left hover:text-[#4F46E5]"
+                className="w-full text-left text-sm hover:text-[#4F46E5]"
               >
                 Profile
               </button>
 
               <button
                 onClick={handleLogout}
-                className="w-full text-left text-red-400 mt-2"
+                className="w-full text-left text-sm text-red-400 mt-2"
               >
                 Logout
               </button>
-
             </div>
           )}
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden ml-1"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <X /> : <Menu />}
@@ -125,15 +127,15 @@ const Navbar = () => {
         </div>
       </div>
 
+
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden flex flex-col px-4 pb-4 gap-2 bg-[#020617] border-t border-gray-800">
 
-          <NavbarItem label="Dashboard" path="/" />
           <NavbarItem label="Courses" path="/courses" />
-          <NavbarItem label="AI" path="/chat" />
-          <NavbarItem label="Assignments" path="/assignments" />
-          <NavbarItem label="Help" path="/help" />
+          <NavbarItem label="Project" path="/project" />
+          <NavbarItem label="Tutorials" path="/tutorials" />
+          <NavbarItem label="My performance" path="/my-performance" />
 
         </div>
       )}

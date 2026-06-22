@@ -1,0 +1,29 @@
+{
+    "courseId": "viz-001",
+    "title": "Data Visualization",
+    "category": "Data",
+    "description": "Visualize data",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Data"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Charts",
+        "content": "Use charts to visualize data.",
+        "code": "plt.plot()",
+        "summary": [
+          "Graphs show trends",
+          "Uses matplotlib"
+        ],
+        "video": "https://www.youtube.com/embed/UO98lJQ3QGI",
+        "quiz": [
+          {
+            "question": "Tool?",
+            "options": ["Matplotlib", "React", "Node", "None"],
+            "answer": "Matplotlib"
+          }
+        ]
+      }
+    ]
+  }

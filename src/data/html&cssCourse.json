@@ -1,0 +1,29 @@
+{
+    "courseId": "web-001",
+    "title": "HTML & CSS",
+    "category": "Web",
+    "description": "Frontend basics",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Web"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "HTML Basics",
+        "content": "HTML structures web pages.",
+        "code": "<h1>Hello</h1>",
+        "summary": [
+          "HTML is markup",
+          "CSS styles page"
+        ],
+        "video": "https://www.youtube.com/embed/pQN-pnXPaVg",
+        "quiz": [
+          {
+            "question": "HTML is?",
+            "options": ["Language", "Framework", "DB", "None"],
+            "answer": "Language"
+          }
+        ]
+      }
+    ]
+  }

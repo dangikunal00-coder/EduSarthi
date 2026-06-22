@@ -1,0 +1,29 @@
+{
+    "courseId": "api-001",
+    "title": "API Development",
+    "category": "Backend",
+    "description": "Build APIs",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Backend"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "REST API",
+        "content": "API connects frontend and backend.",
+        "code": "app.get('/api')",
+        "summary": [
+          "Uses HTTP",
+          "JSON data"
+        ],
+        "video": "https://www.youtube.com/embed/GZvSYJDk-us",
+        "quiz": [
+          {
+            "question": "API stands for?",
+            "options": ["Application Programming Interface", "App Process", "None", "Both"],
+            "answer": "Application Programming Interface"
+          }
+        ]
+      }
+    ]
+  }

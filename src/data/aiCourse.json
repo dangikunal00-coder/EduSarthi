@@ -1,0 +1,30 @@
+{
+    "courseId": "ai-001",
+    "title": "Artificial Intelligence (AI)",
+    "category": "AI",
+    "description": "Introduction to AI concepts",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["AI"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "What is AI?",
+        "content": "AI enables machines to mimic human intelligence.",
+        "code": "# pseudo AI code",
+        "summary": [
+          "AI simulates intelligence",
+          "Used in automation",
+          "Includes ML, NLP"
+        ],
+        "video": "https://www.youtube.com/embed/2ePf9rue1Ao",
+        "quiz": [
+          {
+            "question": "AI stands for?",
+            "options": ["Artificial Intelligence", "Auto Input", "Advanced Info", "None"],
+            "answer": "Artificial Intelligence"
+          }
+        ]
+      }
+    ]
+  }

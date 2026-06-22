@@ -1,0 +1,29 @@
+{
+    "courseId": "da-001",
+    "title": "Data Analysis",
+    "category": "Data",
+    "description": "Analyze data",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Data"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Data Analysis Basics",
+        "content": "Analyzing data for insights.",
+        "code": "df.describe()",
+        "summary": [
+          "Uses Pandas",
+          "Finds trends"
+        ],
+        "video": "https://www.youtube.com/embed/r-uOLxNrNk8",
+        "quiz": [
+          {
+            "question": "Tool used?",
+            "options": ["Pandas", "HTML", "CSS", "None"],
+            "answer": "Pandas"
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,29 @@
+{
+    "courseId": "react-001",
+    "title": "Frontend Development (React)",
+    "category": "Web",
+    "description": "Learn React",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["React", "Web"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "React Basics",
+        "content": "React is a JS library for UI.",
+        "code": "function App(){ return <h1>Hello</h1> }",
+        "summary": [
+          "Component based",
+          "Uses JSX"
+        ],
+        "video": "https://www.youtube.com/embed/bMknfKXIFA8",
+        "quiz": [
+          {
+            "question": "React is?",
+            "options": ["Framework", "Library", "DB", "None"],
+            "answer": "Library"
+          }
+        ]
+      }
+    ]
+  }

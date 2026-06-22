@@ -1,0 +1,30 @@
+{
+    "courseId": "ds-001",
+    "title": "Data Science",
+    "category": "Data",
+    "description": "Learn data science fundamentals",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Data"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Intro to Data Science",
+        "content": "Data science extracts insights from data.",
+        "code": "import pandas as pd",
+        "summary": [
+          "Uses data",
+          "Includes ML",
+          "Uses Python"
+        ],
+        "video": "https://www.youtube.com/embed/X3paOmcrTjQ",
+        "quiz": [
+          {
+            "question": "Data Science uses?",
+            "options": ["Data", "Code", "Both", "None"],
+            "answer": "Both"
+          }
+        ]
+      }
+    ]
+  }

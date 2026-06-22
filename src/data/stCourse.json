@@ -1,0 +1,29 @@
+{
+    "courseId": "testing-001",
+    "title": "Software Testing",
+    "category": "Software",
+    "description": "Testing basics",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Testing"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Testing Types",
+        "content": "Testing ensures quality.",
+        "code": "// test case",
+        "summary": [
+          "Unit testing",
+          "Integration testing"
+        ],
+        "video": "https://www.youtube.com/embed/UZy1Dj9j9sE",
+        "quiz": [
+          {
+            "question": "Testing ensures?",
+            "options": ["Quality", "Speed", "Design", "None"],
+            "answer": "Quality"
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,31 @@
+{
+    "courseId": "cloud-001",
+    "title": "Cloud Computing",
+    "category": "Modern Tech",
+    "description": "Learn cloud basics",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Cloud"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Cloud Basics",
+        "content": "Cloud provides services over internet.",
+        "code": "// AWS example",
+        "summary": [
+          "IaaS, PaaS, SaaS",
+          "Scalable",
+          "Cost efficient"
+        ],
+        "video": "https://www.youtube.com/embed/M988_fsOSWo",
+        "quiz": [
+          {
+            "question": "Cloud provides?",
+            "options": ["Storage", "Compute", "Both", "None"],
+            "answer": "Both"
+          }
+        ]
+      }
+    ]
+  }
+  

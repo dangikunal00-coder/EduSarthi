@@ -1,0 +1,30 @@
+{
+    "courseId": "c-001",
+    "title": "Programming in C",
+    "category": "Programming",
+    "description": "Learn C programming from basics",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["C", "Programming"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Introduction to C",
+        "content": "C is a procedural programming language widely used for system programming.",
+        "code": "#include<stdio.h>\nint main(){ printf(\"Hello\"); return 0; }",
+        "summary": [
+          "C is procedural language",
+          "Uses printf for output",
+          "Main is entry point"
+        ],
+        "video": "https://www.youtube.com/embed/KJgsSFOSQv0",
+        "quiz": [
+          {
+            "question": "Who developed C?",
+            "options": ["Dennis Ritchie", "James Gosling", "Bjarne", "Guido"],
+            "answer": "Dennis Ritchie"
+          }
+        ]
+      }
+    ]
+  }

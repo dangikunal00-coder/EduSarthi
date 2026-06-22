@@ -1,0 +1,29 @@
+{
+    "courseId": "node-001",
+    "title": "Backend Development (Node.js / Express)",
+    "category": "Web",
+    "description": "Learn backend",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Node", "Backend"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Node Basics",
+        "content": "Node runs JS on server.",
+        "code": "console.log('Server');",
+        "summary": [
+          "Server-side JS",
+          "Uses V8 engine"
+        ],
+        "video": "https://www.youtube.com/embed/TlB_eWDSMt4",
+        "quiz": [
+          {
+            "question": "Node is?",
+            "options": ["Runtime", "Language", "DB", "None"],
+            "answer": "Runtime"
+          }
+        ]
+      }
+    ]
+  }

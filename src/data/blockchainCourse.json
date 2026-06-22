@@ -1,0 +1,29 @@
+{
+    "courseId": "block-001",
+    "title": "Blockchain Technology",
+    "category": "Modern",
+    "description": "Learn blockchain",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Blockchain"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Blockchain Basics",
+        "content": "Blockchain stores data in blocks.",
+        "code": "// blockchain",
+        "summary": [
+          "Decentralized",
+          "Secure"
+        ],
+        "video": "https://www.youtube.com/embed/SSo_EIwHSd4",
+        "quiz": [
+          {
+            "question": "Blockchain is?",
+            "options": ["Distributed", "Centralized", "None", "Both"],
+            "answer": "Distributed"
+          }
+        ]
+      }
+    ]
+  }

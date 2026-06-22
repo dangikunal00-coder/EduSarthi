@@ -1,0 +1,30 @@
+{
+    "courseId": "android-001",
+    "title": "Android Development",
+    "category": "App Dev",
+    "description": "Build mobile apps",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Android"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Android Basics",
+        "content": "Android apps built using Java/Kotlin.",
+        "code": "setContentView()",
+        "summary": [
+          "Uses Android Studio",
+          "XML layouts",
+          "Java/Kotlin"
+        ],
+        "video": "https://www.youtube.com/embed/fis26HvvDII",
+        "quiz": [
+          {
+            "question": "Android uses?",
+            "options": ["Java", "Kotlin", "Both", "None"],
+            "answer": "Both"
+          }
+        ]
+      }
+    ]
+  }

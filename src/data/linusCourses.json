@@ -1,0 +1,29 @@
+{
+    "courseId": "linux-001",
+    "title": "Linux / Shell Programming",
+    "category": "Tools",
+    "description": "Learn Linux",
+    "totalModules": 2,
+    "totalMCQs": 4,
+    "tags": ["Linux"],
+    "modules": [
+      {
+        "id": "module-1",
+        "title": "Linux Basics",
+        "content": "Linux is OS",
+        "code": "ls -l",
+        "summary": [
+          "CLI based",
+          "Powerful commands"
+        ],
+        "video": "https://www.youtube.com/embed/IVquJh3DXUA",
+        "quiz": [
+          {
+            "question": "ls command?",
+            "options": ["List", "Delete", "Move", "None"],
+            "answer": "List"
+          }
+        ]
+      }
+    ]
+  }
