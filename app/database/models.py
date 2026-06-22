@@ -1,11 +1,17 @@
-from sqlalchemy import Column, Integer, String, Float,Boolean
+from sqlalchemy import Column, Integer, String, Float,Boolean,DateTime
 from .connection import Base
+from datetime import datetime
 
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True)
     name = Column(String(100))
     email = Column(String(100))
+    firebase_uid = Column(String, unique=True, index=True)
+    course = Column(String(100))
+    semester = Column(String(50))
+    college = Column(String(150))
+    phone = Column(String(50))
 
 
 
@@ -75,3 +81,5 @@ class Performance(Base):
     score = Column(Integer)
     total = Column(Integer)
     weak = Column(Boolean, default=False)
+    time_spent_seconds = Column(Integer, default=0)
+    created_at = Column(DateTime, default=datetime.utcnow)
